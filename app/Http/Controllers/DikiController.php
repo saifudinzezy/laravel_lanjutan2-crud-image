@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 //panggil class crypt
 use Illuminate\Support\Facades\Crypt;
+//tambahkan utk hashing
+use Illuminate\Support\Facades\Hash;
 
 class DikiController extends Controller
 {
@@ -38,5 +40,19 @@ class DikiController extends Controller
 		echo "Nama : " . $data['nama'];
 		echo "<br/>";
 		echo "Pekerjaan : " . $data['pekerjaan'];
+    }
+
+    //hashing
+    public function hash()
+    {
+        //reload code hash setiap refresh
+        $hash_password_saya = Hash::make('halo123');
+        echo $hash_password_saya;
+
+        if (Hash::check('password_yang_dimasukkan', $password_dari_db)) {
+            // Jika password benar
+        }else{
+            // jika password tidak sesuai
+        }
     }
 }

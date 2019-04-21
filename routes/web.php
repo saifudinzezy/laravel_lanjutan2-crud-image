@@ -22,3 +22,5 @@ Route::get('/enkripsi', 'DikiController@enkripsi');
 //encrypsi
 Route::get('/data/', 'DikiController@data');
 Route::get('/data/{data_rahasia}', 'DikiController@data_proses');
+//hashing
+Route::get('/hash', 'DikiController@hash');

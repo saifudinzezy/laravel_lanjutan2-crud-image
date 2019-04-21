@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/enkripsi', 'DikiController@enkripsi');
+//encrypsi
+Route::get('/data/', 'DikiController@data');
+Route::get('/data/{data_rahasia}', 'DikiController@data_proses');

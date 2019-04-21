@@ -28,3 +28,8 @@ Route::get('/hash', 'DikiController@hash');
 //uload file
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
+//uload file ke db
+Route::get('/upload2', 'UploadsbController@upload2');
+//hapus gambar beserta gambarnya
+Route::get('/upload/hapus/{id}', 'UploadsbController@hapus');
+Route::post('/upload2/proses', 'UploadsbController@proses_upload');
